@@ -28,7 +28,7 @@ export const useDataSet = () => {
   );
 
   return {
-    stopList: stopList,
+    stopList,
     stopById,
   };
 };

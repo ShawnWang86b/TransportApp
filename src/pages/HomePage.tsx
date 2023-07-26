@@ -1,10 +1,10 @@
-import React from "react";
 import { Flex, Box, Text, Button } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { ArrowRightIcon } from "@chakra-ui/icons";
 
 const HomePage = () => {
   const navigate = useNavigate();
+
   return (
     <Flex
       flexDirection="column"
