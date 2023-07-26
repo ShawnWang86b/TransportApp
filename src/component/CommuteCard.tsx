@@ -45,21 +45,23 @@ export const CommuteCard = ({ stopId }: CommuteCardProps) => {
       paddingX="20px"
     >
       <ArrowLeftIcon cursor="pointer" _hover={{ opacity: 0.75 }} />
-      <Box display="flex" gap="10px">
-        <Icon width="50px" height="50px" />
-        <Box>
-          <Text fontSize="lg" fontWeight="medium">
-            {stop.title}
-          </Text>
-          <Text fontSize="sm">Towards {stop.routes[0]?.title ?? "--"}</Text>
+      <Box display="flex">
+        <Box display="flex" gap="10px">
+          <Icon width="50px" height="50px" />
+          <Box>
+            <Text fontSize="lg" fontWeight="medium">
+              {stop.title}
+            </Text>
+            <Text fontSize="sm">Towards {stop.routes[0]?.title ?? "--"}</Text>
+          </Box>
         </Box>
-      </Box>
-      <Box>
-        <Text>
-          {stop.departures.map((departure) =>
-            dayjs(departure.departure_time_utc).format("HH:mm a, ")
-          )}
-        </Text>
+        <Box>
+          <Text>
+            {stop.departures.map((departure) =>
+              dayjs(departure.departure_time_utc).format("HH:mm a, ")
+            )}
+          </Text>
+        </Box>
       </Box>
       <ArrowRightIcon cursor="pointer" _hover={{ opacity: 0.75 }} />
     </Flex>
